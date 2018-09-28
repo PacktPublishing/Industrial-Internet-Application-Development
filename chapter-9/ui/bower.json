@@ -1,0 +1,9 @@
+{
+  "name": "ui",
+  "dependencies": {
+    "px-card": "^2.0.0",
+    "jquery": "^3.3.1",
+    "angular": "1.4.3",
+    "px-gauge": "^2.2.0"
+  }
+}

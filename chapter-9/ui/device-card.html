@@ -1,0 +1,60 @@
+<dom-module id="device-card">
+  <template>
+    <style>
+      :host {
+        display: block;
+        padding: 5px;
+        width: 200px;
+        border: 1px solid black;
+        border-radius: 5px;
+        box-shadow: 10px 10px 50px 0px rgba(0,0,0,0.75);
+      }
+    </style>
+
+    <div>device: {{device}}</div>
+    <div>name: {{name}}</div>
+    <div>timestamp: {{timestamp}}</div>
+    <px-gauge value="{{value}}"></px-gauge>
+  </template>
+  <script>
+    Polymer({
+      is: 'device-card',
+      properties: {
+        device: {type: String, observer: '_deviceChanged'},
+        name: {type: String, observer: '_nameChanged'}
+      },
+      _deviceChanged: function (newValue, oldValue) {
+        if (this.device && this.name) this.loadData();
+      },
+      _nameChanged: function (newValue, oldValue) {
+        if (this.device && this.name) this.loadData();
+      },
+      loadData: function () {
+        fetch('https://time-series-store-predix.run.aws-usw02-pr.ice.predix.io/v1/datapoints', {
+          method: 'POST',
+          body: JSON.stringify({
+            start: 0,
+            tags: [{
+              name: this.name,
+              limit: 1,
+              filters: {
+                attributes: {
+                  devices: this.device
+                }
+              }
+            }]
+          }),
+          headers: new Headers({
+            'Content-Type': 'application/json',
+            Authorization: `Bearer ${ACCESS_TOKEN}`,
+            'Predix-Zone-Id': TIMESERIES_ID
+          })
+        }).then((r) => r.json()).then((response) => {
+          const values = response.tags[0].results[0].values;
+          this.set('value', values[0][1]);
+          this.set('timestamp', values[0][0]);
+        });
+      }
+    });
+  </script>
+</dom-module>

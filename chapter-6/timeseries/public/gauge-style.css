@@ -1,0 +1,12 @@
+.gauge-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+.flex-item {
+  padding: 5px;
+  width: 300px;
+  height: 200px;
+  margin-top: 10px;
+}

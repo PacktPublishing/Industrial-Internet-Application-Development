@@ -1,0 +1,6 @@
+applications:
+-
+  name: assets
+  memory: 128M
+  no-route: true
+  health-check-type: process

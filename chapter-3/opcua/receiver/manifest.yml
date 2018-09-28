@@ -1,0 +1,5 @@
+applications:
+-
+  name: receiver
+  memory: 128M
+  random-route: true

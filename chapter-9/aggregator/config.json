@@ -1,0 +1,10 @@
+{
+  "entry-method": "analytic.aggregator.sum",
+  "non-conda-libs": [
+    "boto"
+  ],
+  "conda-libs": [
+    "numpy",
+    "scipy"
+  ]
+}
