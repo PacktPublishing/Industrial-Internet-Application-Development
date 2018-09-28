@@ -1,0 +1,2 @@
+# Chapter 9, Implementing an IIoT Application with GE's Predix
+This chapter will cover modeling your asset and explains how it will help normalize the assets for analytics, along with storing time series sensor data for assets and developing your first analytics in GE's Predix.

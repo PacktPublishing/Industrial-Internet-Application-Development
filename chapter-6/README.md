@@ -1,0 +1,2 @@
+# Chapter 6, Developing Your First Application for IIOT
+This chapter will help you develop a simple monitoring and diagnosis application that brings together your assets and time series sensor data. You will develop your first analytics and visualize the outcome.
