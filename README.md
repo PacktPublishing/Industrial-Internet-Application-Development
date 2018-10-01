@@ -45,12 +45,12 @@ With the following software and hardware list you can run all code files present
 | -------- | ------------------------------------ | ----------------------------------- |
 | 3, 6 | Node.js 6+ | Windows, Mac OS X, and Linux (Any) |
 | 3, 6 | Docker | Windows, Mac OS X, and Linux (Any) |
-| 3, 6 | PostgreSQL | Windows, Mac OS X, and Linux (Any) |
-| 3, 6 | The Cloud Foundry CLI | Windows, Mac OS X, and Linux (Any) |
-| 3, 6 | Modbus | Windows, Mac OS X, and Linux (Any) |
-| 3, 6 | NodeOPCUA | Windows, Mac OS X, and Linux (Any) |
-| 3, 6 | RPIO | Windows, Mac OS X, and Linux (Any) |
-| 3, 6 | WebSocket | Windows, Mac OS X, and Linux (Any) |
+| 3 | PostgreSQL | Windows, Mac OS X, and Linux (Any) |
+| 3 | The Cloud Foundry CLI | Windows, Mac OS X, and Linux (Any) |
+| 3 | Modbus | Windows, Mac OS X, and Linux (Any) |
+| 3 | NodeOPCUA | Windows, Mac OS X, and Linux (Any) |
+| 3 | RPIO | Windows, Mac OS X, and Linux (Any) |
+| 3 | WebSocket | Windows, Mac OS X, and Linux (Any) |
 
 We also provide a PDF file that has color images of the screenshots/diagrams used in this book. [Click here to download it](https://www.packtpub.com/sites/default/files/downloads/9781788298599_ColorImages.pdf).
 
