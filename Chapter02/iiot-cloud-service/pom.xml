@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>iiot.sample</groupId>
+	<artifactId>iiot-sample-all</artifactId>
+	<version>1.0-SNAPSHOT</version>
+	<name>IIOT Sample Management Modules</name>
+	<description>IIOT Sample Management</description>
+	<organization>
+		<name>IIoT Book</name>
+	</organization>
+	<packaging>pom</packaging>
+
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>1.5.6.RELEASE</version>
+		<relativePath />
+	</parent>
+
+	<modules>
+		<module>iiot-sample-domain</module>
+		<module>iiot-sample</module>
+	</modules>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-core</artifactId>
+			<version>4.3.7.RELEASE</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.eclipse.persistence</groupId>
+			<artifactId>eclipselink</artifactId>
+			<version>2.5.0</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.liquibase</groupId>
+			<artifactId>liquibase-core</artifactId>
+			<version>3.4.0</version>
+		</dependency>
+		 <dependency>
+                	 <groupId>com.google.guava</groupId>
+                	<artifactId>guava</artifactId>
+                	<version>11.0.2</version>
+        	</dependency>
+		  <dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-cache</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-redis</artifactId>
+		</dependency>
+		<!--dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-security</artifactId>
+		</dependency-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-websocket</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.webjars</groupId>
+			<artifactId>webjars-locator</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.webjars</groupId>
+			<artifactId>sockjs-client</artifactId>
+			<version>1.0.2</version>
+		</dependency>
+		<dependency>
+			<groupId>org.webjars</groupId>
+			<artifactId>stomp-websocket</artifactId>
+			<version>2.3.3</version>
+		</dependency>
+		<dependency>
+			<groupId>org.webjars</groupId>
+			<artifactId>bootstrap</artifactId>
+			<version>3.3.7</version>
+		</dependency>
+		<dependency>
+			<groupId>org.webjars</groupId>
+			<artifactId>jquery</artifactId>
+			<version>3.1.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+					<mainClass>iiot.sample.Application</mainClass>
+				</configuration>
+				<executions>
+					<execution>
+						<goals>
+							<goal>repackage</goal>
+						</goals>
+						<configuration>
+							<classifier>exec</classifier>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<groupId>org.liquibase</groupId>
+				<artifactId>liquibase-maven-plugin</artifactId>
+				<version>3.4.0</version>
+				<configuration>
+					<changeLogFile>src/main/resources/db/changelog.xml</changeLogFile>
+					<url>jdbc:postgresql://localhost:5432/iiot-sample</url>
+					<username>postgress</username>
+					<password></password>
+					<changelogSchemaName>iiot-sample</changelogSchemaName>
+				</configuration>
+			</plugin>
+
+		</plugins>
+	</build>
+       <profiles>
+                <profile>
+                        <id>clover.report</id>
+                        <build>
+                                <plugins>
+                                        <plugin>
+                                                <groupId>com.atlassian.maven.plugins</groupId>
+                                                <artifactId>maven-clover2-plugin</artifactId>
+                                                <version>4.0.4</version>
+                                                <configuration>
+                                                        <excludes>
+                                                                <exclude>iiot.sample/doc/**</exclude>
+                                                                <exclude>iiot.sample/asciidoc/**</exclude>
+                                                        </excludes>
+                                                        <license><![CDATA[OqOQSfSInQXkUJlOfQTAHEjwRnmKMcFlJjpaKVtNfSJbTJ
+                                                mi2KD5lKr7D6Br07uT24MwfG2K4ip5WJocgtFHn2YYoxzZ
+                                                RrRmvUMNrRPprOrpPqNxspRrOqRnnMQqOOuWUwMxStuXwP
+                                                wtuwTUxUvXMoOmPnmnmUUnqprstoummmmmUUnqprstoumm
+                                                mmmUU75W7ilYXiWIbpbXoZeUUnmmmm]]>
+                                                        </license>
+                                                </configuration>
+                                                <executions>
+                                                        <execution>
+                                                                <id>clover</id>
+                                                                <goals>
+                                                                        <goal>setup</goal>
+                                                                </goals>
+                                                        </execution>
+                                                        <execution>
+                                                                <phase>verify</phase>
+                                                                <goals>
+                                                                        <goal>aggregate</goal>
+                                                                        <goal>clover</goal>
+                                                                </goals>
+                                                        </execution>
+                                                </executions>
+                                        </plugin>
+                                </plugins>
+                        </build>
+                </profile>
+        </profiles>
+
+	</project>

@@ -1,0 +1,27 @@
+{
+  "requires": true,
+  "lockfileVersion": 1,
+  "dependencies": {
+    "fast-csv": "^2.4.0",
+    "sockjs-client": "^1.1.4",
+    "webstomp-client": "^1.0.8"
+  },
+  "name": "iiot-edge-gateway",
+  "version": "1.0.0",
+  "description": "iiot gateway app",
+  "main": "iiot-edge.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tjayant/iiot-book-samples.git"
+  },
+  "author": "Jayant Thomas",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tjayant/iiot-book-samples/issues"
+  },
+  "homepage": "https://github.com/tjayant/iiot-book-samples#readme"
+}
