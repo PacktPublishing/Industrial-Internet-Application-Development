@@ -57,10 +57,6 @@ We also provide a PDF file that has color images of the screenshots/diagrams use
 
 * Mastering Internet of Things [[Packt]](https://www.packtpub.com/networking-and-servers/mastering-internet-things?utm_source=github&utm_medium=repository&utm_campaign=9781788397483 ) [[Amazon]](https://www.amazon.com/dp/1788397487)
 
-*  [[Packt]]() [[Amazon]](https://www.amazon.com/dp/)
-
-*  [[Packt]]() [[Amazon]](https://www.amazon.com/dp/)
-
 ## Get to Know the Author
 **Alena Traukina**
 is the IoT practice lead at Altoros. She has over 12 year experience in the delivery and support of business-critical software applications, working closely with business owners and providing strategic and organizational leadership for software development. Over the years, Alena has served in different capacities, ranging from software engineer, to software engineering manager, to head of Altoros's Ruby department. She was also one of the first GE Predix Influencers.
