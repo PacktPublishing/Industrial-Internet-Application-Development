@@ -1,0 +1,10 @@
+---
+applications:
+- name: demo-api-gateway
+  memory: 512M
+  instances: 1
+  host: demo-api-gateway
+  buildpack: java_buildpack
+  path: target/demo-api-gateway-1.0.0.jar
+  stack: cflinuxfs2
+  timeout: 180

@@ -1,0 +1,145 @@
+<?xml version="1.0"?>
+<project
+        xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+        xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>demo-api-gateway</artifactId>
+    <name>demo API Gateway pattern application</name>
+    <version>1.0.0</version>
+
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>1.2.3.RELEASE</version>
+        <relativePath/>
+        <!-- lookup parent from repository -->
+    </parent>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-parent</artifactId>
+                <version>1.0.2.RELEASE</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <properties>
+        <!-- The main class to start by executing java -jar -->
+        <start-class>iiotbook.chapter8.apigateway.Application</start-class>
+
+        <!-- APM -->
+        <apm.version>2.4.0-SNAPSHOT</apm.version>
+        <apm.version.2.3.0-RELEASE>2.3.0-RELEASE</apm.version.2.3.0-RELEASE>
+        <!-- stuf -->
+        <stuf.version>1.0.0-SNAPSHOT</stuf.version>
+
+        <!-- Project, Maven, JAVA Version -->
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <java.version>1.8</java.version>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+
+        <codehaus-jackson-mapper.version>1.9.13</codehaus-jackson-mapper.version>
+        <google-guava.version>18.0</google-guava.version>
+        <javax-inject.version>1</javax-inject.version>
+        <javax-servlet-jstl.version>1.2</javax-servlet-jstl.version>
+        <json-path.version>2.0.0</json-path.version>
+        <liquibase-core.version>3.3.5</liquibase-core.version>
+        <openjpa.version>2.4.0</openjpa.version>
+        <postgresql.version>9.4-1200-jdbc41</postgresql.version>
+        <querydsl.version>3.6.0</querydsl.version>
+        <spring-boot.version>1.2.3.RELEASE</spring-boot.version>
+        <spring-context-support.version>4.1.6.RELEASE</spring-context-support.version>
+        <spring-restdocs.version>1.0.0.RELEASE</spring-restdocs.version>
+        <tomcat-embed-jasper.version>8.0.24</tomcat-embed-jasper.version>
+        <tomcat-jdbc.version>8.0.23</tomcat-jdbc.version>
+
+        <!-- Cloud -->
+        <spring-cloud.version>1.0.2.RELEASE</spring-cloud.version>
+
+        <!-- Predix -->
+
+
+        <!--Testing scope-->
+        <assertj-core.version>1.2.0</assertj-core.version>
+        <spring-restdocs.version>1.0.0.RELEASE</spring-restdocs.version>
+
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-feign</artifactId>
+            <version>1.0.2.RELEASE</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-hystrix</artifactId>
+        </dependency>
+        <!--
+       <dependency>
+           <groupId>org.springframework.cloud</groupId>
+           <artifactId>spring-cloud-starter-hystrix-dashboard</artifactId>
+       </dependency>
+
+       <dependency>
+           <groupId>org.springframework.cloud</groupId>
+           <artifactId>spring-cloud-starter-zuul</artifactId>
+       </dependency>
+       -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-hateoas</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <!-- Spring Boot Maven -->
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <version>${spring-boot.version}</version>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.2</version>
+                <configuration>
+                    <source>${maven.compiler.source}</source>
+                    <target>${maven.compiler.target}</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+    <distributionManagement>
+
+
+        <!--<repository>-->
+        <!--<id>local</id>-->
+        <!--<name>local</name>-->
+        <!--<url>http://repo.jenkins.build.ge.com:80/artifactory/devops-ci-test</url>-->
+        <!--</repository>-->
+        <!--<snapshotRepository>-->
+        <!--<id>snapshots</id>-->
+        <!--<name>snapshots</name>-->
+        <!--<url>http://repo.jenkins.build.ge.com:80/artifactory/devops-ci-test</url>-->
+        <!--</snapshotRepository>-->
+    </distributionManagement>
+</project>

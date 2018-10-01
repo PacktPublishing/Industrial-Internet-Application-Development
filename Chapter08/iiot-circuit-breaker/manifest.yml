@@ -1,0 +1,10 @@
+---
+applications:
+  - name: aviation-calm-circuit-breaker-app
+    buildpack: java_buildpack
+    memory: 512M
+    disk_quota: 512M
+    path: service/target/demo-spring-boot-gateway-1.0.0.LOCAL_BUILD.jar
+    env:
+      SPRING_PROFILES_ACTIVE: cloud
+      ASSET_SERVICE_URL: https://aviation-calm-smart-shop-app.run.asv-pr.ice.predix.io
