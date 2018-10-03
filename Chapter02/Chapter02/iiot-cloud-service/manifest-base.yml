@@ -1,0 +1,25 @@
+---
+applications:
+- name: iiot-sample
+  memory: 6G
+  instances: 1
+  host: iiot-sample
+  path: ./iiot-sample/target/iiot-sample-1.0-SNAPSHOT.war
+  timeout: 180
+  services:
+  - iiot-sample-postgres
+  - iiot-sample-redis
+  - apm-newrelic
+
+  env:
+    domain: run.asv-pr.ice.predix.io
+    apm_security_accessType: IS_ACS_AUTHORIZED
+    acsServiceName: predix-acs
+    MEMORY_LIMIT: 4G
+    migrationAttempt: 0
+    CLIENT_ID: 12pspvp704hwlacshcbvfwe7mn5qaj90t3kepi
+    CLIENT_SECRET: zwu8eiug1yvwdxyh6rkdt8rgjdfnjfeu40hyy
+    iiot_sample_postgres_name: iiot-sample-postgres
+    iiot_redis_name: iiot-sample-redis
+
+

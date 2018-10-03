@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                   http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+
+    <include file="db/DDLScripts/001 - iiot-sample-baseline-ddl.sql"/>
+    <include file="/db/DMLScripts/002 - iiot-sample-seed-dml.sql"/>
+    <include file="/db/DMLScripts/003 - iiot-sample-alarm-seed-dml.sql"/>
+
+</databaseChangeLog>

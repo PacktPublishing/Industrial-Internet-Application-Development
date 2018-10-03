@@ -1,0 +1,59 @@
+{
+	"variables": [],
+	"info": {
+		"name": "iiot-sample",
+		"_postman_id": "17324d80-43d1-fc60-3e88-98d3f0e8ea5d",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "{{host}}:{{port}}/v1/iiotsample/alerts",
+			"request": {
+				"url": "{{host}}:{{port}}/v1/iiotsample/alerts",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "bllllllllllllllll",
+						"description": "",
+						"disabled": true
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "file",
+					"file": {
+						"src": ""
+					}
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}:{{port}}/v1/iiotsample/createalert",
+			"request": {
+				"url": "{{host}}:{{port}}/v1/iiotsample/createJsonAlert",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"alertsUuid\":\"alerts8d\",\"severity\":1,\"alertName\":\"Jet Turbine SystemAlert\",\"alertInfo\":\"Jet Turbine Alerts issue\"}"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
