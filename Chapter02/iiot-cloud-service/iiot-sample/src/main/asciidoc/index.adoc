@@ -1,0 +1,7 @@
+Alerts Team;
+:doctype: book
+:icons: font
+:source-highligher: highlightjs
+:toc: left
+:toclevels: 4
+:sectlinks:

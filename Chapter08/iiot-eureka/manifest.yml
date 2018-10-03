@@ -1,0 +1,9 @@
+---
+applications:
+  - name: iiot-eureka-app
+    buildpack: java_buildpack
+    memory: 512M
+    disk_quota: 512M
+    path: target/iiot-eureka-1.0.0-SNAPSHOT.jar
+    env:
+      SPRING_PROFILES_ACTIVE: cloud 

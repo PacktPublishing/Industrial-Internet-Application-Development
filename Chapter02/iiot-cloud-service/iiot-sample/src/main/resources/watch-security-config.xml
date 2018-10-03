@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+        http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-4.2.xsd">
+
+     <!--http xmlns="http://www.springframework.org/schema/security"
+          pattern="/docs/**"
+          request-matcher="ant"
+          entry-point-ref="authnEntryPoint">
+        <anonymous enabled="true"/>
+    </http>
+
+    <http xmlns="http://www.springframework.org/schema/security"
+          pattern="/v1docs/**"
+          request-matcher="ant"
+          entry-point-ref="authnEntryPoint">
+        <anonymous enabled="true"/>
+    </http>
+
+    <http xmlns="http://www.springframework.org/schema/security"
+          pattern="/system_status"
+          request-matcher="ant"
+          disable-url-rewriting="true"
+          entry-point-ref="authnEntryPoint">
+
+        <anonymous enabled="false"/>
+
+        <custom-filter ref="stufContextFilter" position="FIRST"/>
+        <custom-filter ref="tenantContextFilter" after="FIRST"/>
+        <custom-filter ref="securityContextFilter" position="CHANNEL_FILTER"/>
+        <custom-filter ref="oauth2ResourceServerFilter" position="PRE_AUTH_FILTER"/>
+    </http>
+
+    <http xmlns="http://www.springframework.org/schema/security"
+          pattern="/**"
+          request-matcher="ant"
+          disable-url-rewriting="true"
+          use-expressions="true"
+          entry-point-ref="authnEntryPoint">
+
+        <expression-handler ref="stufSecurityExpressionHandler"/>
+
+        <intercept-url pattern="/v1/subscriptions" method="GET" access="hasInstanceReadAuthority() or !isAcsEnabled()or isAcsAuthorized()"/>
+        <intercept-url pattern="/v1/subscriptions" method="POST" access="hasInstanceReadAuthority() or !isAcsEnabled()or isAcsAuthorized()"/>
+        <intercept-url pattern="/v1/subscriptions/**" method="DELETE" access="hasInstanceReadAuthority() or !isAcsEnabled()or isAcsAuthorized()"/>
+
+
+        <intercept-url pattern="/v1/rulesubscriptions" method="GET" access="hasInstanceWriteAuthority() or !isAcsEnabled() or isAcsAuthorized()"/>
+        <intercept-url pattern="/v1/rulesubscriptions" method="PUT" access="hasInstanceWriteAuthority() or !isAcsEnabled() or isAcsAuthorized()"/>
+
+        <intercept-url pattern="/v1/preferences" method="GET" access="hasInstanceWriteAuthority() or !isAcsEnabled() or isAcsAuthorized()"/>
+        <intercept-url pattern="/v1/preferences" method="PUT" access="hasInstanceWriteAuthority() or !isAcsEnabled() or isAcsAuthorized()"/>
+
+
+        <intercept-url pattern="/v1/complexwatches" method="GET" access="hasInstanceWriteAuthority() or !isAcsEnabled() or isAcsAuthorized()"/>
+
+        <intercept-url pattern="/v1/contacts" method="POST" access="hasInstanceWriteAuthority() or !isAcsEnabled() or isAcsAuthorized()"/>
+
+        <intercept-url pattern="/v1/simplewatches" method="GET" access="hasInstanceWriteAuthority() or !isAcsEnabled() or isAcsAuthorized()"/>
+        <intercept-url pattern="/v1/templates" method="GET" access="hasInstanceWriteAuthority() or !isAcsEnabled() or isAcsAuthorized()"/>
+        <intercept-url pattern="/v1/filterdefs" method="GET" access="hasInstanceWriteAuthority() or !isAcsEnabled() or isAcsAuthorized()"/>
+        <intercept-url pattern="/v1/triggerdefs" method="GET" access="hasInstanceWriteAuthority() or !isAcsEnabled() or isAcsAuthorized()"/>
+
+
+        <anonymous enabled="false"/>
+        <csrf disabled="true"/>
+
+        <custom-filter ref="stufContextFilter" position="FIRST"/>
+        <custom-filter ref="tenantContextFilter" after="FIRST"/>
+        <custom-filter ref="securityContextFilter" position="CHANNEL_FILTER"/>
+        <custom-filter ref="oauth2ResourceServerFilter" position="PRE_AUTH_FILTER"/>
+
+        <headers>
+            <content-type-options/>
+        </headers>
+    </http-->
+
+</beans>
